@@ -25,7 +25,7 @@ None
    
 <!--Header displays app title at the top of the page-->
 <head> 
-      <title>Taxonomic Quiz</title>  
+      <title>Austin Macroinvertebrate Key</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -60,14 +60,7 @@ None
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	// Undoes the last change
 	function undo()
@@ -98,6 +91,7 @@ None
 	{
      		margin: 0em;
 	}
+	
 	.page
 	{
     		width: 100vw;
@@ -109,6 +103,7 @@ None
     		z-index: 0;
     		background-color: hsl(0,0%,100%);
 	}
+	
   	.page:target
 	{
     		left: 0vw;
@@ -119,17 +114,35 @@ None
 		max-width: 100%;
 		height: auto;
 	}
+
+	.button1 {
+	  background-color: #808080;
+	  border: none;
+	  border-radius: 12px;
+	  color: white;
+	  padding: 15px 24px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 24px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	  transition-duration: 0.4s;
+	}
+  
+	.button1:hover {
+	  background-color: #4CAF50; /* Green */
+	  color: white;	
+	}
 </style>
 	
 	
-	
-	
-	
-	
+
+
 <!--Describes the content of the pages within the app.-->
 <body>
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Insect Identifier</h1>
+		<h1>Austin Insect Key</h1>
 	</div>
 		
 		<!--This represents the home page and contains a description of the app and its purpose.-->
@@ -139,17 +152,33 @@ None
 			
 			
 			
+			
 			<div class="page" id="home">
-				<div id="header" class="w3-container w3-flat-carrot">
-					<h1>Home</h1>
+				<div id="header" class="w3-container w3-flat-carrot w3-center">
+					<h1>Austin Macroinvertebrates</h1>
 				</div>
 				
-				<p>This app determines the most likely species of an organism based on answers to a series of taxonomic questions.</p>
+				<div class="w3-container w3-white w3-center">
+					<h2>Insect Key</h2>
+					<p>This app determines the most likely genus of benthic macroinvertebrate found in 
+						<br>Austin, TX based on answers to a series of taxonomic questions.</p>
+				</div>
 
+				
 				<!--The following button takes the user to the start of the process.-->
-				<a href="#legsPage" class="w3-btn w3-grey w3-round">Begin</a>
-
-				<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Urban Ecosystems Stream at The University of Texas at 		Austin. Members of the UE Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+				<center>	
+					<br>
+					<a href="#legsPage" class="button1">
+						<img id="homeBug" src="https://i.imgur.com/KjVFHUa.png" alt="homeBug" class="dynamicimg w3-round" style="width:50%">
+						<br> Begin
+					</a>
+					<br>
+				<center>
+				<div class="w3-container w3-white w3-center">
+					<br>
+					<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Urban Ecosystems Stream at 
+					The University of Texas at Austin. Members of the UE Stream, FRI, and The University of Texas system are not liable for anything 
+					related to this code.</p>
 			</div>
 		
 			
@@ -197,13 +226,13 @@ None
 		
 
 					
-					<a href="#shellPage" onclick=" ;" class="w3-btn w3-black">Mite<br><img id="miteimg" src="https://media.proprofs.com/images/QM/user_images/3073412/1693950438.jpg" alt="mite" class="dynamicimg"></a>
+					<a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Mite<br><img id="miteimg" src="https://media.proprofs.com/images/QM/user_images/3073412/1693950438.jpg" alt="mite" class="dynamicimg"></a>
 						<br>
-					<br><a href="#shellPage" onclick=" ;" class="w3-btn w3-black">Amphipod<br><img id="amphipodimg" src="https://media.proprofs.com/images/QM/user_images/3073412/3544964702.png" alt="amphipod" class="dynamicimg"></a>
+					<br><a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Amphipod<br><img id="amphipodimg" src="https://media.proprofs.com/images/QM/user_images/3073412/3544964702.png" alt="amphipod" class="dynamicimg"></a>
 						<br>
-					<br><a href="#shellPage" onclick=" ;" class="w3-btn w3-black">Collembola<br><img id="collembolaimg" src="https://media.proprofs.com/images/QM/user_images/3073412/4470076056.jpg" alt="collembola" class="dynamicimg"></a>
+					<br><a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Collembola<br><img id="collembolaimg" src="https://media.proprofs.com/images/QM/user_images/3073412/4470076056.jpg" alt="collembola" class="dynamicimg"></a>
 						<br>
-					<br><a href="#shellPage" onclick=" ;" class="w3-btn w3-black">None of the Above<br><img id="classinsectaimg" src="https://media.proprofs.com/images/QM/user_images/3073412/5192289208.jpg" alt="classinsecta" class="dynamicimg"></a>
+					<br><a href="#insectPage" onclick=" ;" class="w3-btn w3-black">None of the Above<br><img id="classinsectaimg" src="https://media.proprofs.com/images/QM/user_images/3073412/5192289208.jpg" alt="classinsecta" class="dynamicimg"></a>
 						<br>
 					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
 						<br>
@@ -227,7 +256,7 @@ None
 						
 						
 						
-					<a href="# " onclick="         ;" class="w3-btn w3-black">          </a>
+					<a href="#resultsPage " onclick="         ;" class="w3-btn w3-black">          </a>
 						<br>
 					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
 						<br>
@@ -331,6 +360,57 @@ None
 			
 			
 			
+			
+		<!--This represents the page which contains the INSECT FAMILY question.-->
+			<div class="page" id="insectPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question 7</h1>
+				</div>
+	
+				
+				
+    				<div id="content" class="w3-container">
+					<center>
+					<p>Your organism is an insect. Now we need to know what family it belongs to. </p>
+		
+
+					
+					<a href="#dipteraPage" onclick=" ;" class="w3-btn w3-black">Order Diptera (fly larvae)<br><img id="dipteraimg" src="https://i.imgur.com/UsxbwOO.jpg" alt="diptera" class="dynamicimg"></a>
+						<br>
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>
+			
+			
+			
+			
+		<!--This represents the page which contains the ORDER: DIPTERA question.-->
+			<div class="page" id="dipteraPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question 7</h1>
+				</div>
+	
+			
+    				<div id="content" class="w3-container">
+					<center>
+					<p>ORDER: DIPTERA. Which of the following best describes your diptera larva? </p>
+		
+					
+					<a href="#simuliidaePage" onclick=" ;" class="w3-btn w3-black">One small fleshy proleg near the head (A). The back end looks plump and swollen (B). <br>Two large labral fans protrude from the head for collecting food (C).<br><img id="simuliidaeimg" src="https://i.imgur.com/Trq88ps.png" alt="simuliidae" class="dynamicimg"></a>
+						<br>
+					
+				<!--End branch. The organism is a Chironomidae.-->
+					<a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Two sets of fleshy prolegs: one at the front end (A) and one at the back end (B). <br> The head capsule is round and easily identifiable. The organism often rests in a curved fetal position after being treated with ethanol. <br>They are often very small and appear whitish-yellowish in color.<br><img id="simuliidaeimg" src="https://i.imgur.com/Trq88ps.png" alt="simuliidae" class="dynamicimg"></a>
+						<br>
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>
 		<!--This represents the final results page, displaying the determined species.-->
 			<div class="page" id="resultsPage">
 				<div class="w3-container w3-flat-carrot">
