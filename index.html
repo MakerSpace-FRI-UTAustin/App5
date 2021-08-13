@@ -382,7 +382,7 @@ This tells the program to remove the unwanted species.
 					<a href="#clamPage" onclick="eliminate('Ancylid');eliminate('Bladder Snail');eliminate('Pond Snail');eliminate('Rams Horn Snail');" class="button2">Bivalve/Clam (two hinged pieces)<br> <!--Go to QUESTION 6-->
 						<img id="bivalveimg" src="https://imgur.com/QhRxXVx.jpg" alt="bivalve" class="dynamicimg"></a>
 						<br>
-					<a href="#resultsPage" onclick="eliminate('Asian Clam');eliminate('Fingernail Clam');eliminate('Bladder Snail');eliminate('Pond Snail');eliminate('Rams Horn Snail');" class="button2">Small Dome (single piece)<br>
+					<a href="#resultsPage" onclick="eliminate('Asian Clam');eliminate('Fingernail Clam');eliminate('Bladder Snail');eliminate('Pond Snail');eliminate('Rams Horn Snail');calculate();" class="button2">Small Dome (single piece)<br>
 						<img id="smalldomeimg" src="https://imgur.com/zcmbogG.jpg" alt="smalldome" class="dynamicimg"></a>
 						<br>
 					<a href="#snailPage" onclick="eliminate('Asian Clam');eliminate('Fingernail Clam')eliminate('Ancylid');" class="button2">Gastropod/Snail (single piece, spiral or swirl)<br> <!--Go to QUESTION 7-->
@@ -412,11 +412,11 @@ This tells the program to remove the unwanted species.
 					<p>The organism is a clam. Which of the following best describes it?</p>
 		
 				<!--End branch. The organism is an Asian clam.-->
-					<a href="#resultsPage" onclick="eliminate('Fingernail Clam');" class="button2">Dark yellow to brown or black in color, pronounced ridges along shell<br>
+					<a href="#resultsPage" onclick="eliminate('Fingernail Clam');calculate();" class="button2">Dark yellow to brown or black in color, pronounced ridges along shell<br>
 						<img id="darkyellowimg" src="https://imgur.com/ptu9UQQ.jpg" alt="darkyellow" class="dynamicimg"></a>
 						<br>
 				<!--End branch. The organism is a fingernail clam.-->
-					<a href="#resultsPage" onclick="eliminate('Asian Clam');" class="button2">Pale yellow, less defined/smoother ridges (typically smaller than the above, can be semi-transparent)<br><img id="paleyellowimg" src="https://imgur.com/nWIeOG3.jpg" alt="paleyellow" class="dynamicimg"></a>
+					<a href="#resultsPage" onclick="eliminate('Asian Clam');calculate();" class="button2">Pale yellow, less defined/smoother ridges (typically smaller than the above, can be semi-transparent)<br><img id="paleyellowimg" src="https://imgur.com/nWIeOG3.jpg" alt="paleyellow" class="dynamicimg"></a>
 						<br>
 					
 					<br><a href="javascript:history.back()" onclick="undo(4);" class="w3-btn w3-grey w3-round">Go Back</a>	
@@ -439,13 +439,13 @@ This tells the program to remove the unwanted species.
 					<center>
 					<p>What is the orientation of the snail shell?</p>
 		
-					<a href="#resultsPage" onclick="eliminate('Pond Snail');eliminate('Rams Horn Snail');" class="button2">The opening is to the left of the spiral<br> <!--End of branch. Physidae -->
+					<a href="#resultsPage" onclick="eliminate('Pond Snail');eliminate('Rams Horn Snail');calculate();" class="button2">The opening is to the left of the spiral<br> <!--End of branch. Physidae -->
 						<img id="physidaeimg" src="https://imgur.com/DLUvemN.jpg" alt="physidae" class="dynamicimg"></a>
 						<br>
-					<a href="#resultsPage" onclick="eliminate('Bladder Snail');eliminate('Rams Horn Snail');" class="button2">The opening is to the right of the spiral<br> <!--End of branch. Lymnaeidae-->
+					<a href="#resultsPage" onclick="eliminate('Bladder Snail');eliminate('Rams Horn Snail');calculate();" class="button2">The opening is to the right of the spiral<br> <!--End of branch. Lymnaeidae-->
 						<img id="lymnaeidaeimg" src="https://imgur.com/yluTUFA.jpg" alt="lymnaeidae" class="dynamicimg"></a>
 						<br>
-					<a href="#resultsPage" onclick="eliminate('Bladder Snail');eliminate('Pond Snail');" class="button2">The spiral is round and flat. The opening has no leaning<br> <!--End of branch. Planorbidae.-->
+					<a href="#resultsPage" onclick="eliminate('Bladder Snail');eliminate('Pond Snail');calculate();" class="button2">The spiral is round and flat. The opening has no leaning<br> <!--End of branch. Planorbidae.-->
 						<img id="planorbidaeimg" src="https://imgur.com/PQgRhmE.jpg" alt="planorbidaeimg" class="dynamicimg"></a>
 						<br>
 					
