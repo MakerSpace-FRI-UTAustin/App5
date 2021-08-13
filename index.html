@@ -471,13 +471,13 @@ This tells the program to remove the unwanted species.
 					<center>
 					<p>Is your organism oblong and flat with visible eyespots?</p>
 		
-					<a href="#resultsPage" onclick=" ;" class="button2">Yes<br> <!--End of branch. Dugesia -->
+					<a href="#resultsPage" onclick="eliminate('Leech');eliminate('Roundworm');calculate();" class="button2">Yes<br> <!--End of branch. Dugesia -->
 						<img id="dugesiaimg" src="https://imgur.com/dM8dJuX.jpg" alt="dugesia" class="dynamicimg"></a>
 						<br>
-					<a href="#leachPage" onclick=" ;" class="button2">No, my organism does not have these features.</a>
+					<a href="#leechPage" onclick="eliminate('Flatworm');" class="button2">No, my organism does not have these features.</a>
 						<br>
 					
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+					<br><a href="javascript:history.back()" onclick="undo(6);" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -489,7 +489,7 @@ This tells the program to remove the unwanted species.
 					
 					
 		<!--QUESTION 9: This represents the page which contains the LEACH question.-->
-			<div class="page" id="leachPage">
+			<div class="page" id="leechPage">
 				<div id="header" class="w3-container w3-flat-carrot">
 					<h1>Question 9</h1>
 				</div>
@@ -499,13 +499,13 @@ This tells the program to remove the unwanted species.
 					<center>
 					<p>Does your organism have a tapered elongate body with a suction cup at either end?</p>
 		
-					<a href="#resultsPage" onclick=" ;" class="button2">Yes, my organism has suction cups<br> <!--End of branch. Hirudinae -->
+					<a href="#resultsPage" onclick="eliminate('Roundworm');calculate();" class="button2">Yes, my organism has suction cups<br> <!--End of branch. Hirudinae -->
 						<img id="hirudinaeimg" src="https://imgur.com/sZeoJ0E.jpg" alt="hirudinae" class="dynamicimg"></a>
 						<br>
-					<a href="#wormPage" onclick=" ;" class="button2">No, my organism does not have suction cups.</a>
+					<a href="#wormPage" onclick="eliminate('Leech');" class="button2">No, my organism does not have suction cups.</a>
 						<br>
 					
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+					<br><a href="javascript:history.back()" onclick="undo(1);" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -525,13 +525,14 @@ This tells the program to remove the unwanted species.
 					<center>
 					<p>Is your organism long and thin with repeating identical segments? Does your organism have no visible eyes and no head capsule? Are there no significant irregularities in width or unusual projections?</p>
 		
-					<a href="#resultsPage" onclick=" ;" class="button2">Yes, this description fits my organism. My organism looks like a roundworm.<br> <!--End of branch. Oligochaeta. -->
+		<!--add eliminate function when diptera is added-->
+					<a href="#resultsPage" onclick=" ;calculate();" class="button2">Yes, this description fits my organism. My organism looks like a roundworm.<br> <!--End of branch. Oligochaeta. -->
 						<img id="oligochaetaimg" src="https://imgur.com/C1SEOcf.jpg" alt="oligochaeta" class="dynamicimg"></a>
 						<br>
-					<a href="#dipteraPage" onclick=" ;" class="button2">No, my organism has some features such as eyes, a head capsule, or protrusions that distinguish one end from the other.</a>
+					<a href="#dipteraPage" onclick="eliminate('Roundworm');" class="button2">No, my organism has some features such as eyes, a head capsule, or protrusions that distinguish one end from the other.</a>
 						<br>
 					
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+					<br><a href="javascript:history.back()" onclick="undo(1);" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
