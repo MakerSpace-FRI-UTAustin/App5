@@ -338,33 +338,6 @@ This tells the program to remove the unwanted species.
 			
 
 			
-		<!--This represents the page which contains the SEED question.-->
-			<div class="page" id="seedPage">
-				<div class="w3-container w3-flat-carrot">
-					<h1>Question 3</h1>
-				</div>
-	
-				<div id="content" class="w3-container">
-					<center>
-						<p>Does the organism look like a small, clear seed?</p>
-						
-						
-						
-					<a href="#resultsPage" onclick="         ;" class="w3-btn w3-black">Yes</a>
-						<br>
-					<a href="#shellPage" onclick="         ;" class="w3-btn w3-black">No</a>
-						<br>
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
-						<br>
-					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
-					</center>
-				</div>
-			</div>
-			
-			
-			
-			
-			
 		<!--This represents the page which contains the SHELL question.-->
 			<div class="page" id="shellPage">
 				<div id="header" class="w3-container w3-flat-carrot">
@@ -377,14 +350,14 @@ This tells the program to remove the unwanted species.
 					<p>Does the organism have a shell?</p>
 
 					
-					<a href="#shelltypesPage" onclick=" ;" class="button2">Yes<br> 
+					<a href="#shelltypesPage" onclick="eliminate('Flatworm');eliminate('Leech');eliminate('Roundworm');" class="button2">Yes<br> 
 						<img id="shellimg" src="https://imgur.com/8UKnXKp.jpg" alt="shell" class="dynamicimg"></a>
 						<br>
-					<a href="#oblongPage" onclick=" ;" class="button2">No<br> 	<!-- GoTo QUESTION 8-->
+					<a href="#oblongPage" onclick="eliminate('Asian Clam');eliminate('Fingernail Clam');eliminate('Ancylid');eliminate('Bladder Snail');eliminate('Pond Snail');eliminate('Rams Horn Snail');" class="button2">No<br> 	<!-- GoTo QUESTION 8-->
 						<img id="noshellimg" src="https://imgur.com/WqhBCGC.jpg" alt="noshell" class="dynamicimg"></a>
 						<br>
 					
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+					<br><a href="javascript:history.back()" onclick="undo(1);" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -406,13 +379,13 @@ This tells the program to remove the unwanted species.
 					<center>
 					<p>What is the organism's type of shell?</p>
 		
-					<a href="#clamPage" onclick=" ;" class="button2">Bivalve/Clam (two hinged pieces)<br> <!--Go to QUESTION 6-->
+					<a href="#clamPage" onclick="eliminate('Ancylid');eliminate('Bladder Snail');eliminate('Pond Snail');eliminate('Rams Horn Snail');" class="button2">Bivalve/Clam (two hinged pieces)<br> <!--Go to QUESTION 6-->
 						<img id="bivalveimg" src="https://imgur.com/QhRxXVx.jpg" alt="bivalve" class="dynamicimg"></a>
 						<br>
-					<a href="#resultsPage" onclick=" ;" class="button2">Small Dome (single piece)<br>
+					<a href="#resultsPage" onclick="eliminate('Asian Clam');eliminate('Fingernail Clam');eliminate('Bladder Snail');eliminate('Pond Snail');eliminate('Rams Horn Snail');" class="button2">Small Dome (single piece)<br>
 						<img id="smalldomeimg" src="https://imgur.com/zcmbogG.jpg" alt="smalldome" class="dynamicimg"></a>
 						<br>
-					<a href="#snailPage" onclick=" ;" class="button2">Gastropod/Snail (single piece, spiral or swirl)<br> <!--Go to QUESTION 7-->
+					<a href="#snailPage" onclick="eliminate('Asian Clam');eliminate('Fingernail Clam')eliminate('Ancylid');" class="button2">Gastropod/Snail (single piece, spiral or swirl)<br> <!--Go to QUESTION 7-->
 						<img id="gastropodimg" src="https://imgur.com/m29Kwn6.jpg" alt="gastropod" class="dynamicimg"></a>
 						<br>
 					
@@ -439,14 +412,14 @@ This tells the program to remove the unwanted species.
 					<p>The organism is a clam. Which of the following best describes it?</p>
 		
 				<!--End branch. The organism is an Asian clam.-->
-					<a href="#resultsPage" onclick=" ;" class="button2">Dark yellow to brown or black in color, pronounced ridges along shell<br>
+					<a href="#resultsPage" onclick="eliminate('Fingernail Clam');" class="button2">Dark yellow to brown or black in color, pronounced ridges along shell<br>
 						<img id="darkyellowimg" src="https://imgur.com/ptu9UQQ.jpg" alt="darkyellow" class="dynamicimg"></a>
 						<br>
 				<!--End branch. The organism is a fingernail clam.-->
-					<a href="#resultsPage" onclick=" ;" class="button2">Pale yellow, less defined/smoother ridges (typically smaller than the above, can be semi-transparent)<br><img id="paleyellowimg" src="https://imgur.com/nWIeOG3.jpg" alt="paleyellow" class="dynamicimg"></a>
+					<a href="#resultsPage" onclick="eliminate('Asian Clam');" class="button2">Pale yellow, less defined/smoother ridges (typically smaller than the above, can be semi-transparent)<br><img id="paleyellowimg" src="https://imgur.com/nWIeOG3.jpg" alt="paleyellow" class="dynamicimg"></a>
 						<br>
 					
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+					<br><a href="javascript:history.back()" onclick="undo(4);" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -466,13 +439,13 @@ This tells the program to remove the unwanted species.
 					<center>
 					<p>What is the orientation of the snail shell?</p>
 		
-					<a href="#resultsPage" onclick=" ;" class="button2">The opening is to the left of the spiral<br> <!--End of branch. Physidae -->
+					<a href="#resultsPage" onclick="eliminate('Pond Snail');eliminate('Rams Horn Snail');" class="button2">The opening is to the left of the spiral<br> <!--End of branch. Physidae -->
 						<img id="physidaeimg" src="https://imgur.com/DLUvemN.jpg" alt="physidae" class="dynamicimg"></a>
 						<br>
-					<a href="#resultsPage" onclick=" ;" class="button2">The opening is to the right of the spiral<br> <!--End of branch. Lymnaeidae-->
+					<a href="#resultsPage" onclick="eliminate('Bladder Snail');eliminate('Rams Horn Snail');" class="button2">The opening is to the right of the spiral<br> <!--End of branch. Lymnaeidae-->
 						<img id="lymnaeidaeimg" src="https://imgur.com/yluTUFA.jpg" alt="lymnaeidae" class="dynamicimg"></a>
 						<br>
-					<a href="#resultsPage" onclick=" ;" class="button2">The spiral is round and flat. The opening has no leaning<br> <!--End of branch. Planorbidae.-->
+					<a href="#resultsPage" onclick="eliminate('Bladder Snail');eliminate('Pond Snail');" class="button2">The spiral is round and flat. The opening has no leaning<br> <!--End of branch. Planorbidae.-->
 						<img id="planorbidaeimg" src="https://imgur.com/PQgRhmE.jpg" alt="planorbidaeimg" class="dynamicimg"></a>
 						<br>
 					
